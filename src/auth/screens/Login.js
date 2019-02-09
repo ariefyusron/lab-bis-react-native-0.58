@@ -16,7 +16,7 @@ class Login extends Component {
             />
           </View>
           <View>
-            <FormLogin />
+            <FormLogin navigation={this.props.navigation} />
           </View>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>

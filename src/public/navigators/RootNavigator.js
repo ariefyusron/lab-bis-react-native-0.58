@@ -1,11 +1,21 @@
-import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator, createMaterialTopTabNavigator, createAppContainer } from 'react-navigation';
 
 import Login from '../../auth/screens/Login';
-import Contact from '../../contact/screens/Contact';
+import Account from '../../account/screens/Account';
+import Class from '../../class/screens/Class';
+import Home from '../../home/screens/Home';
 
-const switchNavigator = createSwitchNavigator({
-  Login,
-  Contact
+const tabNavigator = createMaterialTopTabNavigator({
+  Home,
+  Class,
+  Account
 })
 
-export default createAppContainer(switchNavigator);
+const stackNavigator = createStackNavigator({
+  Login,
+  tabNavigator
+},{
+  headerMode: 'none'
+})
+
+export default createAppContainer(stackNavigator);

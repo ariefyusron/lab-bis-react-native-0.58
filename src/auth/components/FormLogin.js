@@ -5,27 +5,34 @@ import { connect } from 'react-redux';
 
 import Input from './redux-form/Input';
 
-const FormLogin = () => (
-  <View style={styles.container}>
-    <Field
-      name='nim'
-      placeholder='Nim'
-      returnKeyType='next'
-      keyboardType='numeric'
-      component={Input}
-    />
-    <Field
-      name='password'
-      placeholder='Password'
-      secureTextEntry={true}
-      returnKeyType='go'
-      component={Input}
-    />
-    <TouchableOpacity style={styles.buttonContainer}>
-      <Text style={styles.button}>Log in</Text>
-    </TouchableOpacity>
-  </View>
-);
+const FormLogin = ({navigation}) => {
+  
+  handleLogin = () => {
+    navigation.navigate('tabNavigator')
+  }
+
+  return (
+    <View style={styles.container}>
+      <Field
+        name='nim'
+        placeholder='Nim'
+        returnKeyType='next'
+        keyboardType='numeric'
+        component={Input}
+      />
+      <Field
+        name='password'
+        placeholder='Password'
+        secureTextEntry={true}
+        returnKeyType='go'
+        component={Input}
+      />
+      <TouchableOpacity style={styles.buttonContainer} onPress={handleLogin}>
+        <Text style={styles.button}>Log in</Text>
+      </TouchableOpacity>
+    </View>
+  )
+};
 
 const styles = StyleSheet.create({
   container: {
