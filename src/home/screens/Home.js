@@ -92,7 +92,7 @@ class Home extends Component {
             <Icon
               name={item.typeFile==='pdf'? ('pdffile1'):('doc')}
               type={item.typeFile==='pdf'? ('AntDesign'):('SimpleLineIcons')}
-              style={{color: item.typeFile==='pdf'? ('#FF4343'):('#3498DB')}}
+              style={{color: item.typeFile==='pdf'? ('#FF6060'):('#3498DB')}}
             />
             <View style={styles.detailFile}>
               <Text style={styles.labelNameFile}>{item.file}</Text>
