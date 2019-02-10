@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, Image, StyleSheet, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, StatusBar } from 'react-native';
 
 import FormLogin from '../components/FormLogin';
 
@@ -9,6 +9,7 @@ class Login extends Component {
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView behavior='padding' style={styles.container} enabled>
+          <StatusBar backgroundColor='#3498DB' barStyle='light-content' />
           <View style={styles.logoContainer}>
             <Image
               source={require('../../../assets/img/logo.png')}
