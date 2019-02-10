@@ -9,7 +9,7 @@ class Input extends Component {
     return (
       <TextInput
         placeholder={placeholder}
-        placeholderTextColor='#80BAFF'
+        placeholderTextColor='#9A9A9A'
         secureTextEntry = {secureTextEntry || false}
         returnKeyType={returnKeyType}
         keyboardType={keyboardType || 'default'}
@@ -26,10 +26,9 @@ const styles = StyleSheet.create({
     height: 42,
     marginBottom: 11,
     borderRadius: 5,
-    backgroundColor: '#2980B9',
+    backgroundColor: '#ffff',
     paddingHorizontal: 13,
-    fontSize: 16,
-    color: '#DFEEFF'
+    fontSize: 16
   }
 })
 

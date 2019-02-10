@@ -5,13 +5,16 @@ import { Icon } from 'native-base';
 class Home extends Component {
   
   static navigationOptions = {
-    headerTitle: 'Lab BIS',
+    headerTitle: 'Lab Bis',
     headerTitleStyle: {
-      color: '#0172BB'
+      color: '#ffffff'
+    },
+    headerStyle: {
+      backgroundColor: '#3498DB' 
     },
     headerRight: (
       <TouchableOpacity>
-        <Icon name='send-o' type='FontAwesome' style={{color: '#0172BB', fontSize: 23, marginRight: 19}} />
+        <Icon name='send-o' type='FontAwesome' style={{color: '#ffffff', fontSize: 23, marginRight: 19}} />
       </TouchableOpacity>
     )
   }

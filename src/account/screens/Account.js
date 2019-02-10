@@ -8,8 +8,11 @@ class Account extends Component {
   static navigationOptions = {
     headerTitle: 'Account',
     headerTitleStyle: {
-      color: '#0172BB'
-    }
+      color: '#fff'
+    },
+    headerStyle: {
+      backgroundColor: '#3498DB' 
+    },
   }
 
   render() {
@@ -31,7 +34,7 @@ class Account extends Component {
               <Text style={styles.detail}>2016</Text>
             </View>
           </View>
-          <List />
+          <List navigation={this.props.navigation} />
         </ScrollView>
       </View>
     );

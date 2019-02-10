@@ -19,11 +19,14 @@ class Class extends Component {
   static navigationOptions = {
     headerTitle: 'Class',
     headerTitleStyle: {
-      color: '#0172BB'
+      color: '#fff'
+    },
+    headerStyle: {
+      backgroundColor: '#3498DB' 
     },
     headerRight: (
       <TouchableOpacity>
-        <Icon name='dots-three-vertical' type='Entypo' style={{color: '#595959', fontSize: 20, marginRight: 13}} />
+        <Icon name='dots-three-horizontal' type='Entypo' style={{color: '#ffff', fontSize: 20, marginRight: 20}} />
       </TouchableOpacity>
     )
   }
