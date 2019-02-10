@@ -23,7 +23,7 @@ const tabNavigator = createMaterialTopTabNavigator({
         iconName = 'class'
         typeIcon = 'MaterialIcons'
       } else {
-        iconName = 'ios-more'
+        iconName = 'person'
       }
       return <Icon name={iconName} type={typeIcon} style={{color: tintColor}} />
     },
