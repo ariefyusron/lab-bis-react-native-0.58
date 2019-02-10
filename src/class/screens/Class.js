@@ -16,6 +16,18 @@ class Class extends Component {
     }
   }
 
+  static navigationOptions = {
+    headerTitle: 'Class',
+    headerTitleStyle: {
+      color: '#0172BB'
+    },
+    headerRight: (
+      <TouchableOpacity>
+        <Icon name='dots-three-vertical' type='Entypo' style={{color: '#595959', fontSize: 20, marginRight: 13}} />
+      </TouchableOpacity>
+    )
+  }
+
   _renderListClass = ({item}) => (
     <TouchableOpacity style={styles.row}>
       <View style={styles.colLeft}>
