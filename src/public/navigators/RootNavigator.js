@@ -7,19 +7,31 @@ import Account from '../../account/screens/Account';
 import Class from '../../class/screens/Class';
 import Home from '../../home/screens/Home';
 
-const tabNavigator = createMaterialTopTabNavigator({
-  Home,
-  Class,
+const RouteHome = createStackNavigator({
+  Home
+})
+
+const RouteClass = createStackNavigator({
+  Class
+})
+
+const RouteAccount = createStackNavigator({
   Account
+})
+
+const tabNavigator = createMaterialTopTabNavigator({
+  RouteHome,
+  RouteClass,
+  RouteAccount
 },{
   defaultNavigationOptions: ({navigation}) => ({
     tabBarIcon: ({focused, tintColor}) => {
       const { routeName } = navigation.state
       let iconName
       let typeIcon
-      if(routeName === 'Home'){
+      if(routeName === 'RouteHome'){
         iconName = 'home'
-      } else if(routeName === 'Class'){
+      } else if(routeName === 'RouteClass'){
         iconName = 'class'
         typeIcon = 'MaterialIcons'
       } else {
@@ -30,9 +42,9 @@ const tabNavigator = createMaterialTopTabNavigator({
     tabBarLabel: ({tintColor}) => {
       const { routeName } = navigation.state
       let title
-      if(routeName === 'Home'){
+      if(routeName === 'RouteHome'){
         title = 'Home'
-      } else if(routeName === 'Class'){
+      } else if(routeName === 'RouteClass'){
         title = 'Class'
       } else {
         title = 'Account'
