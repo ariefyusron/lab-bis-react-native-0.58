@@ -22,7 +22,7 @@ class Class extends Component {
       color: '#fff'
     },
     headerStyle: {
-      backgroundColor: '#3498DB' 
+      backgroundColor: '#3498DB'
     },
     headerRight: (
       <TouchableOpacity>
@@ -31,8 +31,8 @@ class Class extends Component {
     )
   }
 
-  _renderListClass = ({item}) => (
-    <TouchableOpacity style={styles.row}>
+  _renderListClass = ({item, index}) => (
+    <TouchableOpacity style={[styles.row,{marginTop: index===0? 12:0}]}>
       <View style={styles.colLeft}>
         <Text style={styles.nameClass}>{item.name}</Text>
         <Text style={styles.memberCLass}>{item.members}</Text>
@@ -47,6 +47,7 @@ class Class extends Component {
     return (
       <View style={styles.container}>
         <FlatList
+          style={styles.flatList}
           data={this.state.data}
           keyExtractor={(item, index) => index.toString()}
           renderItem={this._renderListClass}
@@ -59,8 +60,10 @@ class Class extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F4F4F4',
-    flex: 1,
-    padding: 12
+    flex: 1
+  },
+  flatList: {
+    paddingHorizontal: 12
   },
   row: {
     borderRadius: 5,

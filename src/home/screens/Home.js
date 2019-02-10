@@ -66,8 +66,8 @@ class Home extends Component {
     )
   }
 
-  _renderItem = ({item}) => (
-    <View style={styles.row}>
+  _renderItem = ({item, index}) => (
+    <View style={[styles.row,{marginTop: index===0? 12:0}]}>
       <View style={styles.rowHeader}>
         <View style={styles.containerImage}>
           <Image
@@ -108,6 +108,7 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <FlatList
+          style={styles.flatList}
           data={this.state.data}
           keyExtractor={(item, index) => index.toString()}
           renderItem={this._renderItem}
@@ -120,8 +121,10 @@ class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F4F4F4',
-    flex: 1,
-    padding: 12
+    flex: 1
+  },
+  flatList: {
+    paddingHorizontal: 12
   },
   row: {
     borderRadius: 5,

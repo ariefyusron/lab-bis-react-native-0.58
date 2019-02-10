@@ -18,7 +18,7 @@ class Account extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView style={styles.scrollView}>
           <View style={styles.row}>
             <TouchableOpacity style={styles.containerImage}>
               <Image
@@ -44,8 +44,10 @@ class Account extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F4F4F4',
-    flex: 1,
-    padding: 12
+    flex: 1
+  },
+  scrollView: {
+    paddingHorizontal: 12
   },
   row: {
     borderRadius: 5,
@@ -53,7 +55,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 19,
     paddingVertical: 19,
     flexDirection: 'row',
-    marginBottom: 24
+    marginBottom: 24,
+    marginTop: 12
   },
   detailProfileContainer: {
     marginLeft: 18
