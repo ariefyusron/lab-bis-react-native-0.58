@@ -50,13 +50,13 @@ const styles = StyleSheet.create({
   row: {
     borderRadius: 5,
     backgroundColor: '#fff',
-    paddingHorizontal: 33,
+    paddingHorizontal: 19,
     paddingVertical: 19,
     flexDirection: 'row',
     marginBottom: 24
   },
   detailProfileContainer: {
-    marginLeft: 23
+    marginLeft: 18
   },
   image: {
     height: 100,
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
   },
   name: {
     color: '#000',
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: '300'
   },
   detail: {
     color: '#777777',
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '200'
   },
   containerImage: {
